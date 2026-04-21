@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+@theme {
+  /* ── Brand Colors ──────────────────────────────────── */
+  --color-cream:         #FDFAF7;
+  --color-cream-alt:     #F9F5F0;
+  --color-blush:         #F5E6E0;
+  --color-blush-deep:    #EDD5CC;
+  --color-sage:          #C8D5C0;
+  --color-sage-deep:     #9AB892;
+  --color-gold:          #D4AF72;
+  --color-gold-deep:     #C9A85C;
+  --color-charcoal:      #2C2C2C;
+  --color-charcoal-dark: #1A1A1A;
+
+  /* ── Animations ────────────────────────────────────── */
+  --animate-fade-up:       fadeUp       0.7s ease-out both;
+  --animate-fade-in:       fadeIn       0.6s ease-out both;
+  --animate-wa-glow:       waGlow       2.8s ease-in-out infinite;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0);     }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes waGlow {
+  0%   { box-shadow: 0 4px 18px rgba(0,0,0,0.22), 0 0 0 0 rgba(37,211,102,0.55); }
+  60%  { box-shadow: 0 4px 18px rgba(0,0,0,0.22), 0 0 0 14px rgba(37,211,102,0); }
+  100% { box-shadow: 0 4px 18px rgba(0,0,0,0.22), 0 0 0 0 rgba(37,211,102,0); }
+}
+
+/* ── Font utilities (reference next/font CSS vars) ─── */
+@layer utilities {
+  .font-cormorant {
+    font-family: var(--font-cormorant), Georgia, "Times New Roman", serif;
+  }
+  .font-inter {
+    font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+  }
+}
+
+/* ── Base layer ───────────────────────────────────── */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #FDFAF7;
+    color: #2C2C2C;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: var(--font-inter), system-ui, sans-serif;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+}
