@@ -44,7 +44,7 @@ export default function HeroSection() {
       {/* ── Desktop hero ─────────────────────────────────── */}
       <div className="hidden md:flex min-h-screen">
         {/* Left text pane */}
-        <div className="w-[55%] flex flex-col justify-center px-16 xl:px-24 pt-20 bg-cream">
+        <div className="w-[55%] flex flex-col justify-center px-16 xl:px-24 pt-24 bg-cream">
           <p className="font-inter text-xs tracking-[0.28em] uppercase text-gold mb-6 font-light">
             London Event Styling
           </p>
