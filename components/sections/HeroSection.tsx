@@ -11,6 +11,7 @@ export default function HeroSection() {
           fill
           className="object-cover object-center"
           priority
+          sizes="100vw"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-charcoal-dark/85 via-charcoal-dark/35 to-transparent" />
         <div className="absolute bottom-0 left-0 right-0 p-8 pb-16">
